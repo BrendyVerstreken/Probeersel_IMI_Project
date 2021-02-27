@@ -21,4 +21,10 @@
     <Folder Include="Styles\" />
     <Folder Include="Views\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="LabraryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Imi.Project.Mobile
@@ -13,6 +9,11 @@ namespace Imi.Project.Mobile
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void BtnLabrary_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LabraryPage());
         }
     }
 }

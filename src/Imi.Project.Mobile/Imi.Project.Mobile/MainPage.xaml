@@ -2,11 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Imi.Project.Mobile.MainPage">
-
-    <StackLayout VerticalOptions="Center">
-        <Label Text="Welcome to my Collection of movies"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"/>
-    </StackLayout>
-
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Spacing="10">
+            <Label>My Collection of movies</Label>
+            <Button Text="Go!" Clicked="BtnLabrary_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
