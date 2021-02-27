@@ -1,0 +1,81 @@
+﻿[
+    {
+      "ImageName": "Icon20",
+      "Width": "20",
+      "Height": "20",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon29",
+      "Width": "29",
+      "Height": "29",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon40",
+      "Width": "40",
+      "Height": "40",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon58",
+      "Width": "58",
+      "Height": "58",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon60",
+      "Width": "60",
+      "Height": "60",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon76",
+      "Width": "76",
+      "Height": "76",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon80",
+      "Width": "80",
+      "Height": "80",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon87",
+      "Width": "87",
+      "Height": "87",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon120",
+      "Width": "120",
+      "Height": "120",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon152",
+      "Width": "152",
+      "Height": "152",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon167",
+      "Width": "167",
+      "Height": "167",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon180",
+      "Width": "180",
+      "Height": "180",
+      "Scale": "1x"
+    },
+    {
+      "ImageName": "Icon1024",
+      "Width": "1024",
+      "Height": "1024",
+      "Scale": "1x"
+    }
+  ]
+
