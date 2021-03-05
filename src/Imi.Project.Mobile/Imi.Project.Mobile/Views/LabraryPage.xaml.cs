@@ -16,5 +16,10 @@ namespace Imi.Project.Mobile
         {
             InitializeComponent();
         }
+
+        private async void BtnCreate_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CreatePage());
+        }
     }
 }

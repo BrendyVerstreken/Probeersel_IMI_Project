@@ -15,5 +15,10 @@ namespace Imi.Project.Mobile
         {
             await Navigation.PushAsync(new LabraryPage());
         }
+
+        private async void BtnSetting_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SettingPage());
+        }
     }
 }

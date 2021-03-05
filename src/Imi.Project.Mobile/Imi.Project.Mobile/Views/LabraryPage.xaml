@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Imi.Project.Mobile.LabraryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView>
+            <TableRoot>
+                <TableSection Title="Labrary">
+                    <EntryCell x:Name="txtSearch" Label="Search" Keyboard="Text"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+            <Button Clicked="BtnCreate_Clicked"
+                    HorizontalOptions="End"
+                    Padding="80,20"
+                    Text="Create"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
