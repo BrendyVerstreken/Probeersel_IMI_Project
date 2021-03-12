@@ -1,0 +1,92 @@
+﻿@page "/labrary"
+@inject ICRUDService<LabraryListItem, LabraryItem> service;
+
+<h2> Labrary </h2>
+<div class="mt-3">
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="alert alert-danger">
+            @error
+        </div>
+    }
+
+    @if (currentMovie == null)
+    {
+        <LabraryList LabraryListItems="labraryListItems"
+                     OnAddClick="AddMovie"
+                     OnEditClick="EditMovie"
+                     OnDeleteClick="DeleteMovie">
+
+        </LabraryList>
+    }
+    else
+    {
+        <Labrary Movie="currentMovie"
+                 OnSaveClick="SaveMovie"
+                 OnCancelClick="ShowList">
+
+        </Labrary>
+
+    }
+
+</div>
+
+@code {
+    private LabraryListItem[] labraryListItems;
+    private LabraryItem currentMovie;
+    private string error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ShowList();
+    }
+
+    public async Task ShowList()
+    {
+        labraryListItems = await service.GetList();
+        this.currentMovie = null;
+    }
+
+    public async Task AddMovie()
+    {
+        this.currentMovie = await service.GetNew();
+    }
+
+    public async Task EditMovie(LabraryListItem item)
+    {
+        this.currentMovie = await service.Get(item.Id);
+    }
+
+    public async Task SaveMovie(LabraryItem item)
+    {
+        try
+        {
+            if (currentMovie.Id == 0)
+            {
+                await service.Create(currentMovie);
+            }
+            else
+            {
+                await service.Update(currentMovie);
+            }
+            await this.ShowList();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+
+    public async Task DeleteMovie(LabraryListItem item)
+    {
+        try
+        {
+            await service.Delete(item.Id);
+            await this.ShowList();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+}

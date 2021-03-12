@@ -24,5 +24,6 @@ namespace Imi.Project.Blazor
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }

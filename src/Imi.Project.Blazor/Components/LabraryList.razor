@@ -1,0 +1,43 @@
+﻿<button class="btn btn-primary" @onclick="OnAddClick">Add movie</button>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th></th>
+            <th> Id </th>
+            <th> Title </th>
+            <th> Discription </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in LabraryListItems)
+        {
+        <tr>
+            <td>
+                <button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">
+                    Edit
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-warning" @onclick="e => OnDeleteClick.InvokeAsync(item)">
+                    Delete
+                </button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@code
+{
+    [Parameter]
+    public LabraryListItem[] LabraryListItems { get; set; }
+
+    [Parameter]
+    public EventCallback OnAddClick { get; set; }
+
+    [Parameter]
+    public EventCallback<LabraryListItem> OnEditClick { get; set; }
+
+    [Parameter]
+    public EventCallback<LabraryListItem> OnDeleteClick { get; set; }
+}

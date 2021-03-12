@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace Imi.Project.Blazor.Models
 {
-    public class LabraryListItem
+    public class MenuItem
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        //public int Genre { get; set; }
+        public string Caption { get; set; }
+        public string Href { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-using Imi.Project.Blazor.Data;
+using Imi.Project.Blazor.Models;
+using Imi.Project.Blazor.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -28,7 +29,8 @@ namespace Imi.Project.Blazor
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
+
+            services.AddTransient<ICRUDService<LabraryListItem, LabraryItem>,LabraryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

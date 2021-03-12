@@ -49,5 +49,11 @@ namespace Imi.Project.Mobile.Domain.Services.Mocking
             movieList.Add(movie);
             return await Task.FromResult(movie);
         }
+
+        public async Task<IQueryable<Movie>> GetMovieListsForUser(Guid userid)
+        {
+            var movies = movieList.Where(e => e.OwnerId == userid).AsQueryable();
+            return await Task.FromResult(movies);
+        }
     }
 }

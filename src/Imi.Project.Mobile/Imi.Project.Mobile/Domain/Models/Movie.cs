@@ -13,5 +13,6 @@ namespace Imi.Project.Mobile.Domain.Models
         public string ProductionHouse { get; set; }
         public string Director { get; set; }
         public string Description { get; set; }
+        public Guid OwnerId { get; set; }
     }
 }
