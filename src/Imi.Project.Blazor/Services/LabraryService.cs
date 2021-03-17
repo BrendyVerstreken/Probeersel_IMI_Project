@@ -17,7 +17,8 @@ namespace Imi.Project.Blazor.Services
                 YearRelease = 2010,
                 ProductionHouse = "Disney",
                 Director = "Glen Keane",
-                Description = "An evil witch named Lucretia despised fairy tale happy endings and plotted to change all that."
+                Description = "An evil witch named Lucretia despised fairy tale happy endings and plotted to change all that.",
+                Cover = new Uri("https://s1.thcdn.com/productimg/1600/1600/11408850-1354458444808092.jpg")
             },
             new LabraryItem()
             {
@@ -26,7 +27,8 @@ namespace Imi.Project.Blazor.Services
                 YearRelease = 2013,
                 ProductionHouse = "Warner Bros",
                 Director = "Rob Cowan",
-                Description = "It's a movie that is inspreratet on a house that exist"
+                Description = "It's a movie that is inspreratet on a house that exist",
+                Cover = new Uri("https://1.bp.blogspot.com/-AWHincTlbg0/Xl_ba4h47gI/AAAAAAAAK-M/vJnhn-zryokZQEeC6pNS25-tPXTQEgTwQCLcBGAsYHQ/s1600/MM00202393-1.jpg")
             },
             new LabraryItem()
             {
@@ -35,7 +37,8 @@ namespace Imi.Project.Blazor.Services
                 YearRelease = 2019,
                 ProductionHouse = "Disney",
                 Director = "Peter Del Vecho",
-                Description = "The story of this movie get about a girl with icy powers that feel she's looking for something"
+                Description = "The story of this movie get about a girl with icy powers that feel she's looking for something",
+                Cover = new Uri("http://www.kiwithebeauty.com/wp-content/uploads/2020/02/frozen-2-poster.jpg")
             }
         };
             
@@ -66,7 +69,9 @@ namespace Imi.Project.Blazor.Services
                 items.Select(x => new LabraryListItem()
                 {
                     Id = x.Id,
-                    Title = x.Title
+                    Title = x.Title,
+                    Description = x.Description
+                    
                 }).ToArray()
             );
         }

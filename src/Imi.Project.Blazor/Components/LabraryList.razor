@@ -12,16 +12,11 @@
         @foreach (var item in LabraryListItems)
         {
         <tr>
-            <td>
-                <button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">
-                    Edit
-                </button>
-            </td>
-            <td>
-                <button class="btn btn-warning" @onclick="e => OnDeleteClick.InvokeAsync(item)">
-                    Delete
-                </button>
-            </td>
+            <td>@item.Id</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">Edit</button></td>
+            <td><button class="btn btn-warning" @onclick="e => OnDeleteClick.InvokeAsync(item)">Delete</button></td>
         </tr>
         }
     </tbody>

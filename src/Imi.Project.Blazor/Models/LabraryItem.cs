@@ -15,5 +15,6 @@ namespace Imi.Project.Blazor.Models
         public string ProductionHouse { get; set; }
         public string Description { get; set; }
         //public InputSelectItem[] Genres { get; set; }
+        public Uri  Cover { get; set; }
     }
 }

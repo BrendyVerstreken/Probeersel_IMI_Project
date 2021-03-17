@@ -3,26 +3,31 @@
     <ValidationSummary />
 
     <div class="form-group">
-        <label for="title">Title: </label>
+        <label for="title"> Title: </label>
         <InputText id="title" @bind-Value="Movie.Title" class="form-control" />
         <ValidationMessage For="@(() => Movie.Title)" />
     </div>
     <div class="form-group">
-        <label for="year">Year of releast: </label>
+        <label for="cover"> Cover: </label>
+        <img src="@Movie.Cover" alt="@Movie.Title" />
+    </div>
+    <div class="form-group">
+        <label for="year"> Year of releast: </label>
         <InputNumber id="year" @bind-Value="Movie.YearRelease" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="director">Director: </label>
+        <label for="director"> Director: </label>
         <InputTextArea id="description" @bind-Value="Movie.Director" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="productionHouse">ProductionHouse: </label>
+        <label for="productionHouse"> ProductionHouse: </label>
         <InputTextArea id="productionHouse" @bind-Value="Movie.ProductionHouse" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="description">Description: </label>
+        <label for="description"> Description: </label>
         <InputTextArea id="description" @bind-Value="Movie.Description" class="form-control" />
     </div>
+
 
 
     <button type="submit" class="btn btn-primary">Save</button>

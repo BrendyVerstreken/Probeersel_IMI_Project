@@ -9,5 +9,6 @@ namespace Imi.Project.Api.Core.Entities
     {
         public string Name { get; set; }
         public ICollection<Movie> Movies { get; set; }
+
     }
 }

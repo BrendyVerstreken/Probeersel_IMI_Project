@@ -11,9 +11,9 @@ namespace Imi.Project.Api.Core.Entities
         public int YearRealase { get; set; }
         public Uri Image { get; set; }
         public ICollection<MovieGenre> MovieGenres { get; set; } //Movie kan meerdere genres hebben
-        public Productionhouse Productionhouse { get; set; }
+        public Guid ProductionhouseId { get; set; }
         public ICollection<MovieLentout> MovieLentouts { get; set; }//Movie kan verschillende keren uitgeleend worden
-        public Director Director { get; set; }
+        public Guid DirectorId { get; set; }
 
     }
 }

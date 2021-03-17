@@ -8,7 +8,6 @@ namespace Imi.Project.Api.Core.Entities
     public class LentOut : EntityBase
     {
         public string Name { get; set; }
-        public DateTime LentOutDate { get; set; }
         public ICollection<MovieLentout> MovieLentouts { get; set; }
     }
 }
