@@ -9,12 +9,12 @@ namespace Imi.Project.Blazor.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        //public int GenreId { get; set; }
+        public string GenreId { get; set; }
         public int YearRelease { get; set; }
         public string Director { get; set; }
         public string ProductionHouse { get; set; }
         public string Description { get; set; }
-        //public InputSelectItem[] Genres { get; set; }
-        public Uri  Cover { get; set; }
+        public InputSelectItem[] Genres { get; set; }
+        public Uri Cover { get; set; }
     }
 }

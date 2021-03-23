@@ -6,17 +6,25 @@
         <Grid>
             <Label HorizontalOptions="Center" FontSize="Title">My Collection of movies</Label>
             <StackLayout Spacing="5" VerticalOptions="Center">
-
-                <Button Clicked="BtnLabrary_Clicked"
+                <Button Clicked="BtnLogin_Clicked"
                         HorizontalOptions="Center"
                         Padding="80,20"
-                        Text="Go!">
-                </Button>
+                        HeightRequest="75"
+                        WidthRequest="250"
+                        Text="Login"></Button>
+                <Button Clicked="BtnLabrary_Clicked"
+                        HorizontalOptions="Center"
+                        Padding="80,20"                        
+                        HeightRequest="75"
+                        WidthRequest="250"
+                        Text="Go!"></Button>
                 <Button Clicked="BtnSetting_Clicked" 
-                    HorizontalOptions="Center"
+                        HorizontalOptions="Center"
                         Padding="80,20"
+                        HeightRequest="75"
+                        WidthRequest="250"
                         Text="Settings"></Button>
-                <Image Source="launcher_foreground.png" Aspect="AspectFit" HeightRequest="250" />
+
             </StackLayout>
         </Grid>
     </ContentPage.Content>

@@ -30,7 +30,7 @@ namespace Imi.Project.Blazor
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddTransient<ICRUDService<LabraryListItem, LabraryItem>,LabraryService>();
+            services.AddTransient<ICRUDService<LabraryListItem, LabraryItem>, LabraryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

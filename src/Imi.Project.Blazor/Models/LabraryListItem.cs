@@ -9,7 +9,7 @@ namespace Imi.Project.Blazor.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        //public int Genre { get; set; }
+        public string Genre { get; set; }
         public string Description { get; set; }
     }
 }

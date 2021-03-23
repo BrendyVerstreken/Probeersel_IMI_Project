@@ -1,26 +1,20 @@
 ﻿<button class="btn btn-primary" @onclick="OnAddClick">Add movie</button>
-<table class="table mt-3">
-    <thead>
-        <tr>
-            <th></th>
-            <th> Id </th>
-            <th> Title </th>
-            <th> Discription </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in LabraryListItems)
-        {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Title</td>
-            <td>@item.Description</td>
-            <td><button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">Edit</button></td>
-            <td><button class="btn btn-warning" @onclick="e => OnDeleteClick.InvokeAsync(item)">Delete</button></td>
-        </tr>
-        }
-    </tbody>
-</table>
+
+@foreach (var item in LabraryListItems)
+{
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"> @item.Title</h5>
+            <h6 class="card-subtitle mb-2 text-muted"> @item.Id</h6>
+            <p class="card text"> @item.Description</p>
+            <p></p>
+            <button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">Edit</button>
+            <button class="btn btn-warning" @onclick="e => OnDeleteClick.InvokeAsync(item)">Delete</button>
+        </div>
+    </div>
+}
+
+
 
 @code
 {

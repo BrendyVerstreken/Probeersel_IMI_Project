@@ -1,4 +1,14 @@
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
 .form-group img {
     max-width: 25%;
     max-height: 25%;
 }
+
+.card {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: grid;
+
+}
+

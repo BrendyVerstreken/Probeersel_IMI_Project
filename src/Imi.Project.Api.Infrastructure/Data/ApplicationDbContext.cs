@@ -37,7 +37,7 @@ namespace Imi.Project.Api.Infrastructure.Data
                 .HasForeignKey(mg => mg.GenreId);
 
             MovieSeeder.Seed(modelBuilder);
-            DirectoSeeder.Seed(modelBuilder);
+            DirectorSeeder.Seed(modelBuilder);
             ProductionhouseSeeder.Seed(modelBuilder);
             GenreSeeder.Seed(modelBuilder);
             LentoudSeeder.Seed(modelBuilder);

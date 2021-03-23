@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Imi.Project.Mobile.Views;
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 
@@ -20,5 +21,12 @@ namespace Imi.Project.Mobile
         {
             await Navigation.PushAsync(new SettingPage());
         }
+
+        private async void BtnLogin_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
+
+
 }
