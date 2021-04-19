@@ -1,5 +1,5 @@
 ﻿using Imi.Project.Api.Core.Entities;
-using Imi.Project.Api.Infrastructure.Seeding;
+using Imi.Project.Api.Infrastructure.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -35,6 +35,19 @@ namespace Imi.Project.Api.Infrastructure.Data
                 .HasOne(mg => mg.Genre)
                 .WithMany(g => g.MovieGenres)
                 .HasForeignKey(mg => mg.GenreId);
+
+            modelBuilder.Entity<MovieLentout>()
+                .ToTable("MovieLentout")
+                .HasKey(ml => new { ml.MovieId, ml.LentOutId });
+            modelBuilder.Entity<MovieLentout>()
+                .HasOne(ml => ml.Movie)
+                .WithMany(m => m.MovieLentouts)
+                .HasForeignKey(ml => ml.MovieId);
+            modelBuilder.Entity<MovieLentout>()
+                .HasOne(ml => ml.LentOut)
+                .WithMany(m => m.MovieLentouts)
+                .HasForeignKey(ml => ml.LentOutId);
+                
 
             MovieSeeder.Seed(modelBuilder);
             DirectorSeeder.Seed(modelBuilder);

@@ -6,16 +6,11 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <TableView>
-                <TableRoot>
-                    <TableSection>
-                        <EntryCell x:Name="txtSearch" Label="Search" Keyboard="Text"/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
+            <SearchBar x:Name="SearchInput" TextChanged="SearchBar_TextChanged"></SearchBar>
             <ListView x:Name="lvLabraryLists"
                           HasUnevenRows="False" RowHeight="50"
-                          ItemTapped="lvLabraryLists_ItemTapped">
+                          ItemTapped="lvLabraryLists_ItemTapped"
+                      >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -34,6 +29,9 @@
             <Button Clicked="BtnCreate_Clicked"
                     HorizontalOptions="End"
                     Padding="80,20"
+                    BackgroundColor="orange"
+                    BorderColor="Black"
+                    CornerRadius="50"
                     Text="Create"></Button>
         </StackLayout>
     </ContentPage.Content>

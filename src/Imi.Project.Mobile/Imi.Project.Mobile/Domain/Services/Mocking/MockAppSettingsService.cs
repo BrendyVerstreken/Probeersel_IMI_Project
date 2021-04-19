@@ -10,7 +10,8 @@ namespace Imi.Project.Mobile.Domain.Services.Mocking
     {
         private static AppSettings currentSettings = new AppSettings
         {
-            EnableLentOut = true
+            EnableLentOut = true,
+            ChangeTheme = true
         };
 
         public async Task<AppSettings> GetSettings()

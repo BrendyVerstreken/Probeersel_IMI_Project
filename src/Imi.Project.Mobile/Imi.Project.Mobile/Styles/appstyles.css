@@ -1,0 +1,23 @@
+﻿navigationpage {
+    background-color: lightyellow;
+}
+
+button {
+    background-color: orange;
+}
+
+stacklayout > label {
+    color: black;
+}
+
+^Label {
+    text-align: center;
+    font-style: italic;
+    color: black;
+
+}
+
+^Entry {
+    text-align: center;
+    font-style: italic;
+}

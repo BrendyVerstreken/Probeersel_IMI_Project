@@ -1,0 +1,48 @@
+﻿<EditForm>
+    <div class="form-group">
+        <label for="title"> Title: </label>
+        <InputText id="title" @bind-Value="Movie.Title" class="form-control" />
+        <ValidationMessage For="@(() => Movie.Title)" />
+    </div>
+
+    <div class="form-group">
+        <label for="genre"> Genre: </label>
+        <InputSelect id="genre" @bind-Value="Movie.GenreId" class="form-control">
+            @foreach (var genre in Movie.Genres)
+            {
+                <option value="@genre.Value">@genre.Label</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label for="cover"> Cover: </label>
+        <img src="@Movie.Cover" alt="@Movie.Title" />
+    </div>
+    <div class="form-group">
+        <label for="year"> Year of releast: </label>
+        <InputNumber id="year" @bind-Value="Movie.YearRelease" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="director"> Director: </label>
+        <InputTextArea id="description" @bind-Value="Movie.Director" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="productionHouse"> ProductionHouse: </label>
+        <InputTextArea id="productionHouse" @bind-Value="Movie.ProductionHouse" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="description"> Description: </label>
+        <InputTextArea id="description" @bind-Value="Movie.Description" class="form-control" />
+    </div>
+
+    <button type="button" class="btn btn-warning" @onclick="OnCancelClick">Cancel</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public LabraryItem Movie { get; set; }
+    [Parameter]
+    public EventCallback OnCancelClick { get; set; }
+
+}

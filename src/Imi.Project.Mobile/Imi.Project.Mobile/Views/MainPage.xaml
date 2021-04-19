@@ -4,26 +4,39 @@
              x:Class="Imi.Project.Mobile.MainPage">
     <ContentPage.Content>
         <Grid>
-            <Label HorizontalOptions="Center" FontSize="Title">My Collection of movies</Label>
+            <Label HorizontalOptions="Center" FontSize="Title"
+                   Padding="65">My Collection of movies</Label>
             <StackLayout Spacing="5" VerticalOptions="Center">
                 <Button Clicked="BtnLogin_Clicked"
-                        HorizontalOptions="Center"
-                        Padding="80,20"
-                        HeightRequest="75"
-                        WidthRequest="250"
-                        Text="Login"></Button>
-                <Button Clicked="BtnLabrary_Clicked"
+                        Text="Login"
+                        BackgroundColor="orange"
+                        BorderColor="Black"
+                        CornerRadius="50"
                         HorizontalOptions="Center"
                         Padding="80,20"                        
                         HeightRequest="75"
-                        WidthRequest="250"
-                        Text="Go!"></Button>
-                <Button Clicked="BtnSetting_Clicked" 
+                        WidthRequest="250">
+                </Button>
+                <Button Clicked="BtnLabrary_Clicked"
+                        Text="Go!"
+                        BackgroundColor="orange"
+                        BorderColor="Black"
+                        CornerRadius="50"
                         HorizontalOptions="Center"
-                        Padding="80,20"
+                        Padding="80,20"                        
                         HeightRequest="75"
-                        WidthRequest="250"
-                        Text="Settings"></Button>
+                        WidthRequest="250">
+                </Button>
+                <Button Clicked="BtnSetting_Clicked"
+                        BackgroundColor="orange"
+                        BorderColor="Black"
+                        CornerRadius="50"
+                        Text="Settings"
+                        HorizontalOptions="Center"
+                        Padding="80,20"                        
+                        HeightRequest="75"
+                        WidthRequest="250">
+                </Button>
 
             </StackLayout>
         </Grid>

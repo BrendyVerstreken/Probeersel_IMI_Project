@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Imi.Project.Mobile.SettingPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save" 
+                     IconImageSource="{OnPlatform UWP=ok.png}" 
+                     Command="{Binding SaveSettingsCommand}" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Settings"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="General settings">
+                    <SwitchCell x:Name="swChangTheTheme" Text="Chang the theme" On="true" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

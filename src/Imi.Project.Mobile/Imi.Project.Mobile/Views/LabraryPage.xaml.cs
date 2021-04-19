@@ -34,7 +34,7 @@ namespace Imi.Project.Mobile
 
         private async void BtnCreate_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CreatePage());
+            await Navigation.PushAsync(new CreatePage(null));
         }
 
         private async void lvLabraryLists_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -42,7 +42,7 @@ namespace Imi.Project.Mobile
             var item = e.Item as Movie;
             if (item != null)
             {
-                await Navigation.PushAsync(new InfoPage());
+                await Navigation.PushAsync(new InfoPage(item));
             }
         }
 
@@ -50,7 +50,7 @@ namespace Imi.Project.Mobile
         {
             var selectedMovie = ((MenuItem)sender).CommandParameter as Movie;
             await DisplayAlert("Edit", $"Editing  {selectedMovie.Title}", "OK");
-            await Navigation.PushAsync(new InfoPage());
+            await Navigation.PushAsync(new InfoPage(selectedMovie));
         }
 
         private async void MnuLabraryDelete_Clicked(object sender, EventArgs e)
@@ -70,5 +70,9 @@ namespace Imi.Project.Mobile
             lvLabraryLists.ItemsSource = buckets;
         }
 
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

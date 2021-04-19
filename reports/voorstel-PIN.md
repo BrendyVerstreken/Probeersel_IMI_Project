@@ -11,3 +11,6 @@ maar ook de mogelijkheid heb om te zoeken op genre, titel, film of serie.
 Met een klik op een titel zou ik dan naar de volgende pagina gaan waar je dan al de info kan vinden over 
 de film zoals titel, jaar van release, genre, regisseur, afbeelding van de cover,…
 Als ik me dan inlog als administrator heb ik dan de mogelijkheid om dingen aan te passen, toe te voegen en eventueel te verwijderen.
+
+## Concept
+Voor het deel concept had ik willen "Vier-op-een-rij" maken.

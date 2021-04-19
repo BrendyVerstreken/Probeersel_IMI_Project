@@ -100,8 +100,6 @@ namespace Imi.Project.Blazor.Services
 
         public Task<LabraryItem> Get(int id)
         {
-            //return Task.FromResult(items.SingleOrDefault(x => x.Id == id));
-
             var movie = items.SingleOrDefault(x => x.Id == id);
             movie.Genres = genres;
             return Task.FromResult(movie);

@@ -3,10 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Info of item"
              x:Class="Imi.Project.Mobile.Views.InfoPage">
-    
-    <ContentPage.Content>
-        <StackLayout>
 
-        </StackLayout>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ScrollView AbsoluteLayout.LayoutFlags="All"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout>
+                    <Label Text="Title"/>
+                    <Entry x:Name="txtTitle" Placeholder="Enter the title here"/>
+                    <Label x:Name="lblErrorTitle" StyleClass="errormessage"/>
+                    <Label Text="Genre"/>
+                    <Entry x:Name="txtGenre" Placeholder="Enter the genre here"/>
+                    <Label x:Name="lblErrorGenre" StyleClass="errormessage"/>
+                    <Label Text="Year of release"/>
+                    <Entry x:Name="txtYear" Placeholder="Enter the year of release here"/>
+                    <Label x:Name="lblErrorYear" StyleClass="errormessage"/>
+                    <Label Text="Productionhouse"/>
+                    <Entry x:Name="txtProductionhouse" Placeholder="Enter the productionhouse here"/>
+                    <Label x:Name="lblErrorProduction" StyleClass="errormessage"/>
+                    <Label Text="Director"/>
+                    <Entry x:Name="txtDirector" Placeholder="Enter the directors name here"/>
+                    <Label x:Name="lblErrorDirector" StyleClass="errormessage"/>
+                    <Label LineBreakMode="CharacterWrap" Text="Description"/>
+                    <Entry x:Name="txtDescription" Placeholder="Enter the description here"/>
+                    <Label x:Name="lblErrorDescription" StyleClass="errormessage" />
+                </StackLayout>
+            </ScrollView>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -11,9 +11,4 @@
     <None Remove="Data\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\letter-o.png" />
-    <None Include="wwwroot\letter-x.png" />
-  </ItemGroup>
-
 </Project>

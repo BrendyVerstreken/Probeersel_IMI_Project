@@ -1,7 +1,6 @@
 ﻿@page "/labrary"
 @inject ICRUDService<LabraryListItem, LabraryItem> service;
 
-<h2> Labrary </h2>
 <div class="mt-3">
     @if (!string.IsNullOrEmpty(error))
     {
@@ -14,6 +13,7 @@
     {
         <LabraryList LabraryListItems="labraryListItems"
                      OnAddClick="AddMovie"
+                     OnReadClick="ReadMovie"
                      OnEditClick="EditMovie"
                      OnDeleteClick="DeleteMovie">
 
@@ -21,11 +21,11 @@
     }
     else
     {
-        <Labrary Movie="currentMovie"
-                 OnSaveClick="SaveMovie"
-                 OnCancelClick="ShowList">
+    <Labrary Movie="currentMovie"
+             OnSaveClick="SaveMovie"
+             OnCancelClick="ShowList">
 
-        </Labrary>
+    </Labrary>
 
     }
 
@@ -53,6 +53,11 @@
     }
 
     public async Task EditMovie(LabraryListItem item)
+    {
+        this.currentMovie = await service.Get(item.Id);
+    }
+
+    public async Task ReadMovie(LabraryListItem item)
     {
         this.currentMovie = await service.Get(item.Id);
     }
@@ -89,4 +94,6 @@
             this.error = ex.Message;
         }
     }
+
+
 }

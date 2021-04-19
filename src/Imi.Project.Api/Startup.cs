@@ -1,17 +1,18 @@
+using Imi.Project.Api.Core.Entities;
+using Imi.Project.Api.Core.Interfaces.Repositories;
+using Imi.Project.Api.Core.Interfaces.Services;
+using Imi.Project.Api.Core.Services;
 using Imi.Project.Api.Infrastructure.Data;
+using Imi.Project.Api.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Imi.Project.Api
 {
@@ -28,6 +29,29 @@ namespace Imi.Project.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DatabaseConnection")));
+
+
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IGenreService, GenreService>();
+            services.AddScoped<IDirectorService, DirectorService>();
+            services.AddScoped<ILentOutService, LentoutService>();
+            services.AddScoped<IProductionhouseService, ProductionhouseService>();
+            services.AddScoped<IImageService, ImageService>();
+
+            services.AddScoped<IRepository<Movie>, EfRepository<Movie>>();
+            services.AddScoped<IRepository<Genre>, EfRepository<Genre>>();
+            services.AddScoped<IRepository<Director>, EfRepository<Director>>();
+            services.AddScoped<IRepository<LentOut>, EfRepository<LentOut>>();
+            services.AddScoped<IRepository<Productionhouse>, EfRepository<Productionhouse>>();
+
+            services.AddCors();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "Imi.Project.Api", Version = "v1" }); });
+
             services.AddControllers();
         }
 
@@ -39,7 +63,21 @@ namespace Imi.Project.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger(); 
+
+            app.UseSwaggerUI(c =>
+            { 
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Imi.Project.Api"); 
+                c.RoutePrefix = string.Empty; 
+            });
+
+            app.UseCors(builder => builder.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod());
+
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles();
 
             app.UseRouting();
 

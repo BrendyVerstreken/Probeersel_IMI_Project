@@ -4,10 +4,10 @@
 {
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title"> @item.Title</h5>
-            <h6 class="card-subtitle mb-2 text-muted"> @item.Id</h6>
+            <h5 class="card-title">@item.Id) @item.Title</h5>
             <p class="card text"> @item.Description</p>
             <p></p>
+            <button class="btn btn-warning" @onclick="e => OnReadClick.InvokeAsync(item)">More info</button>
             <button class="btn btn-warning" @onclick="e => OnEditClick.InvokeAsync(item)">Edit</button>
             <button class="btn btn-warning" @onclick="e => OnDeleteClick.InvokeAsync(item)">Delete</button>
         </div>
@@ -20,6 +20,9 @@
 {
     [Parameter]
     public LabraryListItem[] LabraryListItems { get; set; }
+
+    [Parameter]
+    public EventCallback<LabraryListItem> OnReadClick { get; set; }
 
     [Parameter]
     public EventCallback OnAddClick { get; set; }
