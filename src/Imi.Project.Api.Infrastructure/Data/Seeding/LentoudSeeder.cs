@@ -15,7 +15,8 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                 new LentOut { Name = "Steve", Id = Guid.Parse("f8ab5013-ef70-4cd6-8327-2c526beceb3b"), },
                 new LentOut { Name = "Imana", Id = Guid.Parse("d610ddc2-66e1-4c5e-840b-6174964d3a90"), },
                 new LentOut { Name = "Amalia", Id = Guid.Parse("5779b386-192f-45f0-a77c-e0c3ada65801"), },
-                new LentOut { Name = "Sharona", Id = Guid.Parse("0855fe6f-1966-4c14-8a50-33d2f5924cd6"), }
+                new LentOut { Name = "Sharona", Id = Guid.Parse("0855fe6f-1966-4c14-8a50-33d2f5924cd6"), },
+                new LentOut { Name = "Hilde", Id = Guid.Parse("bcab7b0b-529a-4243-aac0-6a9daf3a63da"), }
                 );
         }
     }

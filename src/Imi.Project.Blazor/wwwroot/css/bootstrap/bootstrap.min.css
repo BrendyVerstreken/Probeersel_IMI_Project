@@ -2463,16 +2463,16 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff
+    color: white;
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
 }
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #0069d9;
-        border-color: #0062cc
-    }
+        background-color: #e0a800;
+        border-color: #d39e00
+    }#
 
     .btn-primary.focus, .btn-primary:focus {
         box-shadow: 0 0 0 .2rem rgba(38,143,255,.5)
@@ -2527,15 +2527,15 @@ a.btn.disabled, fieldset:disabled a.btn {
         }
 
 .btn-success {
-    color: #fff;
-    background-color: #28a745;
-    border-color: #28a745
+    color: white;
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod
 }
 
     .btn-success:hover {
         color: #fff;
-        background-color: #218838;
-        border-color: #1e7e34
+        background-color: darkgoldenrod;
+        border-color: darkgoldenrod
     }
 
     .btn-success.focus, .btn-success:focus {
@@ -2543,15 +2543,15 @@ a.btn.disabled, fieldset:disabled a.btn {
     }
 
     .btn-success.disabled, .btn-success:disabled {
-        color: #fff;
-        background-color: #28a745;
-        border-color: #28a745
+        color: white;
+        background-color: darkgoldenrod;
+        border-color: darkgoldenrod
     }
 
     .btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show > .btn-success.dropdown-toggle {
         color: #fff;
-        background-color: #1e7e34;
-        border-color: #1c7430
+        background-color: darkgoldenrod;
+        border-color: darkgoldenrod
     }
 
         .btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show > .btn-success.dropdown-toggle:focus {
@@ -2591,9 +2591,9 @@ a.btn.disabled, fieldset:disabled a.btn {
         }
 
 .btn-warning {
-    color: #212529;
-    background-color: #ffc107;
-    border-color: #ffc107
+    color: white;
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod
 }
 
     .btn-warning:hover {

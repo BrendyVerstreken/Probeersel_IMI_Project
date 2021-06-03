@@ -45,8 +45,7 @@ namespace Imi.Project.Api.Core.Services
 
         public async Task<IEnumerable<GenreResponseDto>> ListAllAsync()
         {
-            var result = await _genreRepository.GetAllAsync()
-                .ToListAsync();
+            var result = await _genreRepository.ListAllAsync();
             var dto = _mapper.Map<IEnumerable<GenreResponseDto>>(result);
             return dto;
         }

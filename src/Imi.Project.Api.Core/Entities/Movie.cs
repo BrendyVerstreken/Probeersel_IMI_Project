@@ -8,7 +8,6 @@ namespace Imi.Project.Api.Core.Entities
     public class Movie : EntityBase
     {
         public string Title { get; set; }
-        public int YearRealase { get; set; }
         public Uri Image { get; set; }
         public ICollection<MovieGenre> MovieGenres { get; set; } //Movie kan meerdere genres hebben
         public Guid ProductionhouseId { get; set; }

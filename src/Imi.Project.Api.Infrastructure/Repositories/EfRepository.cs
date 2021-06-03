@@ -36,7 +36,7 @@ namespace Imi.Project.Api.Infrastructure.Repositories
             return await query.SingleOrDefaultAsync(t => t.Id.Equals(id));
         }
 
-        public IQueryable<T> GetAllAsync()
+        public virtual IQueryable<T> GetAllAsync()
         {
             return _dbContext.Set<T>().AsNoTracking();
         }

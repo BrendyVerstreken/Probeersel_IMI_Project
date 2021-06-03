@@ -29,10 +29,10 @@ namespace Imi.Project.Api.Core.Services
         public async Task<IEnumerable<MovieResponseDto>> GetByGenreIdAsync(Guid id)
         {
             var result = await _movieRepository
-                .GetFiltered(m => m.MovieGenres.Any(mg => mg.GenreId.Equals(id)))
-                .Include(m => m.MovieGenres)
-                    .ThenInclude(mg => mg.Genre)
-                .ToListAsync();
+                 .GetFiltered(m => m.MovieGenres.Any(mg => mg.GenreId.Equals(id)))
+                 .Include(m => m.MovieGenres)
+                     .ThenInclude(mg => mg.Genre)
+                 .ToListAsync();
 
             var dto = _mapper.Map<IEnumerable<MovieResponseDto>>(result);
             return dto;
@@ -49,11 +49,12 @@ namespace Imi.Project.Api.Core.Services
             var dto = _mapper.Map<IEnumerable<MovieResponseDto>>(result);
             return dto;
         }
+
         public async Task<IEnumerable<MovieResponseDto>> ListAllAsync()
         {
             var result = await _movieRepository.GetAllAsync()
-                 .Include(a => a.MovieLentouts)
-                    .ThenInclude(m => m.LentOut)
+                .Include(a => a.MovieLentouts)
+                    .ThenInclude(b => b.LentOut)
                 .Include(m => m.MovieGenres)
                     .ThenInclude(m => m.Genre)
                 .ToListAsync();
@@ -101,9 +102,9 @@ namespace Imi.Project.Api.Core.Services
         {
             var artist = await _movieRepository.GetByIdAsync(id);
 
-            if (artist == null) return null; 
-            artist.Image = await _imageService.AddOrUpdateImageAsync<Movie>(id, image); 
-            await _movieRepository.UpdateAsync(artist); 
+            if (artist == null) return null;
+            artist.Image = await _imageService.AddOrUpdateImageAsync<Movie>(id, image);
+            await _movieRepository.UpdateAsync(artist);
             return await GetByIdAsync(id);
         }
     }

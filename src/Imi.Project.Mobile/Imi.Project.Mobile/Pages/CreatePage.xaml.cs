@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using FluentValidation;
+﻿using FluentValidation;
 using Imi.Project.Mobile.Domain.Models;
 using Imi.Project.Mobile.Domain.Services;
 using Imi.Project.Mobile.Domain.Services.Mocking;
@@ -12,7 +11,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Imi.Project.Mobile
+namespace Imi.Project.Mobile.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreatePage : ContentPage

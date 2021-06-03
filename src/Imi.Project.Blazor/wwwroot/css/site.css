@@ -3,13 +3,15 @@
 .form-group img {
     max-width: 25%;
     max-height: 25%;
+    background-color: lightyellow;
+    border: black, solid, 3px;
 }
 
 .card {
     margin-bottom: 5px;
     margin-top: 5px;
     display: grid;
-
+    background-color: lightyellow;
 }
 
 .welcome-text {
@@ -17,28 +19,46 @@
     margin-left: 125px;
 }
 
+.form-group {
+    background-color: lightyellow;
+}
 
+.form-control {
+    background-color: lightyellow;
+}
 
 /*This is for everything for concept*/
-.board {
+.connectfour-board {
     background-color: blue;
     display: flex;
     flex-direction: row;
     max-width: 490px;
 }
 
-.column {
+.connectfour-column {
     min-width: 60px;
     min-height: 60px;
     height: 100%;
 }
 
-.gamepiece {
+.connectfour-gamepiece {
     border: solid 1px black;
     margin: 5px;
     min-height: 60px;
     min-width: 60px;
     border-radius: 50px;
+}
+
+.connectfour-red {
+    background-color: red;
+}
+
+.connectfour-yellow {
+    background-color: yellow;
+}
+
+.connectfour-blank {
+    background-color: lightyellow;
 }
 
 .red {
@@ -50,5 +70,5 @@
 }
 
 .blank {
-    background-color: white;
+    background-color: lightyellow;
 }

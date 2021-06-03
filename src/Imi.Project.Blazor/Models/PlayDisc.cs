@@ -8,7 +8,12 @@ namespace Imi.Project.Blazor.Models
 {
     public class PlayDisc
     {
-        public DiscColor Color { get; set; }
+        public DiscColor Color;
+
+        public PlayDisc()
+        {
+            Color = DiscColor.Blank;
+        }
 
         public PlayDisc(DiscColor color)
         {

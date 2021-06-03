@@ -128,7 +128,6 @@ namespace Imi.Project.Blazor.Services
             movie.GenreId = genres.First().Value;
             return Task.FromResult(movie);
 
-            //return Task.FromResult(new LabraryItem());
         }
 
         public Task Update(LabraryItem item)

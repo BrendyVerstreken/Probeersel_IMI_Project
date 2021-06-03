@@ -1,7 +1,6 @@
 ﻿using Imi.Project.Mobile.Domain.Models;
 using Imi.Project.Mobile.Domain.Services;
 using Imi.Project.Mobile.Domain.Services.Mocking;
-using Imi.Project.Mobile.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +10,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Imi.Project.Mobile
+namespace Imi.Project.Mobile.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LabraryPage : ContentPage
@@ -62,12 +61,9 @@ namespace Imi.Project.Mobile
 
         private async Task RefreshMovieLists()
         {
-            //get settings, because we need current user Id
             var settings = await settingsService.GetSettings();
-            //get all bucket lists for this user
             var buckets = await moviesService.GetMovieListsForUser(settings.CurrentUserId);
-            //bind IEnumerable<Bucket> to the ListView's ItemSource
-            lvLabraryLists.ItemsSource = buckets;
+            //lvLabraryLists.ItemsSource = movies;
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)

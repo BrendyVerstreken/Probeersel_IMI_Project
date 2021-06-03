@@ -11,11 +11,11 @@ namespace Imi.Project.Api.Core.Interfaces.Services
     {
         Task<IEnumerable<MovieResponseDto>> ListAllAsync();
         Task<MovieResponseDto> GetByIdAsync(Guid id);
-        Task<IEnumerable<MovieResponseDto>> GetByGenreIdAsync(Guid id);
         Task<MovieResponseDto> AddAsync(MovieRequestDto movieRequestDto);
         Task<MovieResponseDto> UpdateAsync(MovieRequestDto movieRequestDto);
         Task DeleteAsync(Guid id);
         Task<IEnumerable<MovieResponseDto>> GetByLentoutIdAsync(Guid id);
+        Task<IEnumerable<MovieResponseDto>> GetByGenreIdAsync(Guid id);
         Task<MovieResponseDto> AddOrUpdateImageAsync(Guid id, IFormFile image);
     }
 }
